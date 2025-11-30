@@ -1,5 +1,5 @@
 [project]
-name = "serper_scrape_tool"
+name = "serper_scrape_tool_maz"
 version = "0.1.0"
 description = "Power up your crews with serper_scrape_tool"
 readme = "README.md"

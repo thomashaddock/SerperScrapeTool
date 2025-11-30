@@ -6,7 +6,7 @@ import json
 import requests
 
 
-class SerperScrapeInput(BaseModel):
+class SerperScrapeInputMaz(BaseModel):
     """Input schema for Serper Scrape Tool."""
 
     url: str = Field(..., description="The URL to scrape content from")
@@ -15,14 +15,14 @@ class SerperScrapeInput(BaseModel):
         description="Whether to include markdown formatting in the response",
     )
 
-class SerperScrapeTool(BaseTool):
+class SerperScrapeToolMaz(BaseTool):
     name: str = "Serper Web Scraper"
     description: str = (
         "Scrapes web content from any URL using the Serper API. "
         "Extracts clean, readable content with optional markdown formatting. "
         "Use this tool when you need to get the full content of a webpage for analysis."
     )
-    args_schema: Type[BaseModel] = SerperScrapeInput
+    args_schema: Type[BaseModel] = SerperScrapeInputMaz
 
     def _run(self, url: str, include_markdown: bool = True) -> str:
         """
