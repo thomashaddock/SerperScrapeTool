@@ -23,7 +23,7 @@ def _save_results_to_file(content: str) -> None:
         raise
 
 
-class SerperDevToolSchema(BaseModel):
+class SerperScrapeToolMazSchema(BaseModel):
     """Input for SerperDevTool."""
 
     search_query: str = Field(
@@ -31,13 +31,13 @@ class SerperDevToolSchema(BaseModel):
     )
 
 
-class SerperDevTool(BaseTool):
+class SerperScrapeToolMaz(BaseTool):
     name: str = "Search the internet with Serper"
     description: str = (
         "A tool that can be used to search the internet with a search_query. "
         "Supports different search types: 'search' (default), 'news'"
     )
-    args_schema: Type[BaseModel] = SerperDevToolSchema
+    args_schema: Type[BaseModel] = SerperScrapeToolMazSchema
     base_url: str = "https://google.serper.dev"
     n_results: int = 10
     save_file: bool = False
