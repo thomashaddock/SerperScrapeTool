@@ -5,8 +5,10 @@ description = "Power up your crews with serper_scrape_tool"
 readme = "README.md"
 requires-python = ">=3.10,<3.14"
 dependencies = [
-    "crewai[tools]>=0.201.1"
+    "crewai[tools]>=0.201.1",
+    "pydantic>=2.0.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0"
 ]
-
 [tool.crewai]
 type = "tool"
