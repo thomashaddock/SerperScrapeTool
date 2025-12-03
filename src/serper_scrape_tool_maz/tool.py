@@ -12,7 +12,7 @@ load_dotenv()
 
 
 class SerperScrapeInputMaz(BaseModel):
-    """Input schema for Serper Scrape Tool."""
+    """Input schema for Serper Scrape Tool for MAZ."""
 
     url: str = Field(..., description="The URL to scrape content from")
     include_markdown: bool = Field(
